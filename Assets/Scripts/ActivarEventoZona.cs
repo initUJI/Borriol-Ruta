@@ -17,6 +17,7 @@ public class ActivarEventoZona : MonoBehaviour
             {
                 print("entro");
                 _canvas.SetActive(true);
+                _canvas.transform.localScale = Vector3.one;
                 _canvas.transform.localPosition = new Vector3(_player.transform.localPosition.x + _distancia, _player.transform.localPosition.y + 0.5f, _player.transform.localPosition.z);
                 _canvas.transform.localRotation = _player.transform.localRotation;
             }

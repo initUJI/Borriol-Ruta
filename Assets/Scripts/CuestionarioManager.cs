@@ -16,7 +16,7 @@ public class CuestionarioManager : MonoBehaviour
     private GameObject _respuesta;
 
     private int _numPregunta = 0;
-    private bool _respuestaCorrecta = false;
+    [SerializeField] private bool _respuestaCorrecta = false;
     private bool _acabat = false;
 
     public void Start()
@@ -45,7 +45,7 @@ public class CuestionarioManager : MonoBehaviour
     {
         if(_acabat)
         {
-            _cuestionario.transform.localScale = Vector3.zero;
+            _cuestionario.SetActive(false);
         }
         else
         {
@@ -68,6 +68,7 @@ public class CuestionarioManager : MonoBehaviour
             }
             else
             {
+                if (!_respuesta.GetComponent<ToggleDeselect>().isOn) return;
                 _sonidoError.PlayAudio();
                 _respuesta.GetComponent<ToggleDeselect>().interactable = false;
                 _respuesta.GetComponent<ToggleDeselect>().isOn = false;

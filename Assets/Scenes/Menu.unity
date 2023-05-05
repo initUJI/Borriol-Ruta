@@ -786,7 +786,7 @@ GameObject:
   - component: {fileID: 1217865570}
   - component: {fileID: 1217865572}
   - component: {fileID: 1217865571}
-  m_Layer: 0
+  m_Layer: 5
   m_Name: Texto Boton
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1232,11 +1232,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_Material: {fileID: 2100000, guid: bc9f80a2ae0e0a24d870176e48ab1b93, type: 2}
+  m_Material: {fileID: 0}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
-  m_Maskable: 1
+  m_Maskable: 0
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
@@ -1270,7 +1270,7 @@ GameObject:
   - component: {fileID: 2065419868}
   - component: {fileID: 2065419867}
   - component: {fileID: 2065419866}
-  m_Layer: 0
+  m_Layer: 5
   m_Name: ComprobarRespostaButton
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3292,7 +3292,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!1 &1049773197140116400
 GameObject:
   m_ObjectHideFlags: 0
@@ -5608,8 +5608,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_Material: {fileID: 2100000, guid: bc9f80a2ae0e0a24d870176e48ab1b93, type: 2}
-  m_Color: {r: 0, g: 0, b: 0, a: 1}
+  m_Material: {fileID: 0}
+  m_Color: {r: 0, g: 0, b: 0, a: 0}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
@@ -6190,7 +6190,7 @@ Camera:
   field of view: 90
   orthographic: 0
   orthographic size: 5
-  m_Depth: -1
+  m_Depth: 0
   m_CullingMask:
     serializedVersion: 2
     m_Bits: 4294967263
@@ -10788,7 +10788,6 @@ GameObject:
   m_Component:
   - component: {fileID: 2105271450279632141}
   - component: {fileID: 8115599748570281132}
-  - component: {fileID: 8115599748570281133}
   m_Layer: 0
   m_Name: Contenido
   m_TagString: Untagged
@@ -11858,7 +11857,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_Material: {fileID: 2100000, guid: bc9f80a2ae0e0a24d870176e48ab1b93, type: 2}
+  m_Material: {fileID: 0}
   m_Color: {r: 0.078431375, g: 0.21176471, b: 0.59607846, a: 1}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
@@ -12524,7 +12523,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_Material: {fileID: 2100000, guid: bc9f80a2ae0e0a24d870176e48ab1b93, type: 2}
+  m_Material: {fileID: 0}
   m_Color: {r: 0.12156863, g: 0.1254902, b: 0.12941177, a: 1}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
@@ -19784,7 +19783,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &8106004466037615142
 Transform:
   m_ObjectHideFlags: 0
@@ -19826,26 +19825,6 @@ MonoBehaviour:
   m_ChildScaleWidth: 0
   m_ChildScaleHeight: 0
   m_ReverseArrangement: 0
---- !u!114 &8115599748570281133
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4284293495531768345}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: efd912b3bb155a04ca37ddc4af07fdbe, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _preguntas:
-  - {fileID: 0}
-  - {fileID: 0}
-  _enhorabuena: {fileID: 1467033555}
-  _cuestionario: {fileID: 7480493373028671065}
-  _sonidoCorrecto: {fileID: 796457943}
-  _sonidoError: {fileID: 149716610}
-  _BotonText: {fileID: 1217865571}
 --- !u!137 &8122274499654730292
 SkinnedMeshRenderer:
   m_ObjectHideFlags: 0
@@ -21452,7 +21431,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_Material: {fileID: 2100000, guid: bc9f80a2ae0e0a24d870176e48ab1b93, type: 2}
+  m_Material: {fileID: 0}
   m_Color: {r: 0.16131186, g: 0.169056, b: 0.23584908, a: 1}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
