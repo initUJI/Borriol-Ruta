@@ -7,6 +7,7 @@ using TMPro;
 public class CuestionarioManager : MonoBehaviour
 {
     [SerializeField] GameObject[] _preguntas;
+    [SerializeField] GameObject _inicio;
     [SerializeField] GameObject _enhorabuena;
     [SerializeField] GameObject _cuestionario;
     [SerializeField] AudioTrigger _sonidoCorrecto;
@@ -16,19 +17,27 @@ public class CuestionarioManager : MonoBehaviour
     private GameObject _respuesta;
 
     private int _numPregunta = 0;
-    [SerializeField] private bool _respuestaCorrecta = false;
+    private bool _respuestaCorrecta = false;
     private bool _acabat = false;
+    private bool _començat = false;
 
     public void Start()
     {
         if (_preguntas.Length > 0)
         {
-            _preguntas[_numPregunta].SetActive(true);
+            _BotonText.text = "Començar qüestionari";
         }
         else
         {
             Debug.LogError("Necesitas añadir preguntas al GameObject <i>Contenido</i> del Cuestionario");
         }
+    }
+
+    public void f_ComenzarCuestionario()
+    {
+        _inicio.SetActive(false);
+        _preguntas[_numPregunta].SetActive(true);
+        _BotonText.text = "Comprovar resposta";
     }
 
     public void f_cambiarRespuesta(bool respuestaUsuario)
@@ -43,7 +52,12 @@ public class CuestionarioManager : MonoBehaviour
 
     public void f_compruebaRespuesta()
     {
-        if(_acabat)
+        if (!_començat) 
+        {
+            _començat = true; 
+            f_ComenzarCuestionario();
+        }
+        else if (_acabat)
         {
             _cuestionario.SetActive(false);
         }

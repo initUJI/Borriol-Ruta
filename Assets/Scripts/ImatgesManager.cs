@@ -14,7 +14,7 @@ public class ImatgesManager : MonoBehaviour
     [SerializeField] TextMeshProUGUI _DescripcionTexto;
 
     private int _numImatge = 0;
-    private string[] _descripciones =
+    [SerializeField] string[] _descripciones =
     {
         "Descripcion de la Imagen 1",
         "Descripcion de la Imagen 2",
