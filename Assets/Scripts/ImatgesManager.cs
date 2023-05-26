@@ -8,17 +8,18 @@ using UnityEngine.UI;
 public class ImatgesManager : MonoBehaviour
 {
     [SerializeField] GameObject[] _imatges;
+    [SerializeField] string[] _descripciones =
+    {
+        "Descripcion de la Imagen 1",
+        "Descripcion de la Imagen 2",
+    };
+    [SerializeField] GameObject _canvasQuestionaire;
     [SerializeField] GameObject _canvasImatges;
     [SerializeField] GameObject _botonIzquierda;
     [SerializeField] GameObject _botonDerecha;
     [SerializeField] TextMeshProUGUI _DescripcionTexto;
 
     private int _numImatge = 0;
-    [SerializeField] string[] _descripciones =
-    {
-        "Descripcion de la Imagen 1",
-        "Descripcion de la Imagen 2",
-    };
 
     public void Start()
     {
@@ -81,19 +82,17 @@ public class ImatgesManager : MonoBehaviour
     public void f_CerrarCanvas()
     {
         _canvasImatges.SetActive(false);
+        f_SpawnQuestionaire();
     }
 
-    private GameObject f_GetChildWithName(GameObject obj, string name)
+    public void f_SpawnQuestionaire()
     {
-        Transform trans = obj.transform;
-        Transform childTrans = trans.FindChildRecursive(name);
-        if (childTrans != null)
+        if (_canvasQuestionaire != null)
         {
-            return childTrans.gameObject;
-        }
-        else
-        {
-            return null;
+            _canvasQuestionaire.SetActive(true);
+            _canvasQuestionaire.transform.localScale = Vector3.one;
+            _canvasQuestionaire.transform.localPosition = _canvasImatges.transform.localPosition;
+            _canvasQuestionaire.transform.localRotation = _canvasImatges.transform.localRotation;
         }
     }
 }
